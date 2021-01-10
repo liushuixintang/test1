@@ -1,14 +1,14 @@
 Workspace：工作区(本地目录)
-和仓前是使用同步命令来保持一致  
 Index / Stage：暂存区
 Repository：本地仓库
-Remote：网上仓库
+Remote：网上仓库  
 
 # 设置提交代码时的用户信息
 git config [--global] user.name "[name]"
 git config [--global] user.email "[email address]"
+#设置登入密码 打开.git文件夹编辑config 修改[remote "origin"] url = https://github.com/用户名:密码@github.com/用户名/仓库名.git
 
-
+git status         #查看文件状态
 git init                  #在当前目录下新建库(创建一个隐藏文件.git)
 git clone [url]         #下载一个项目和它的整个代码历史
 git add [文件名] [文件名]            #本地目录可以添加到暂存区 
@@ -16,9 +16,12 @@ git add [dir]      # 添加指定目录到暂存区，包括子目录
 git add .        #添加当前目录的全部文件到暂存区
 git rm [file1] [file2] ...    # 删除工作区文件，并且将这次删除放入暂存区
 git mv [file-original] [file-renamed]    # 改名文件，并且将这个改名放入暂存区
-git commit -m [message]                      # 提交暂存区到仓库区,本地目录发生变化使用此命令后仓库也保持一致
-git commit [file1] [file2] ... -m [message]  # 提交暂存区的指定文件到仓库区
+git commit -m [message]                      # 同步暂存区到本地仓库区,本地目录发生变化使用此命令后仓库也保持一致
+git commit [file1] [file2] ... -m [message]  # 提交暂存区的指定文件到本地仓库区
 git branch                                   # 列出所有本地分支
 git branch -r                                # 列出所有远程分支
 
-git status         #查看文件状态
+#网上仓库的提交流程先复制到本地仓库再提交到网上仓库
+git clone [项目下载url]  #复制命令 
+git push #地同步到网上仓库  
+
