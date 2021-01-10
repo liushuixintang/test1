@@ -12,8 +12,9 @@ git status         #查看文件状态
 git init                  #在当前目录下新建库(创建一个隐藏文件.git)
 git clone [url]         #下载一个项目和它的整个代码历史
 git add [文件名] [文件名]            #本地目录可以添加到暂存区 
-git add [dir]      # 添加指定目录到暂存区，包括子目录
-git add .        #添加当前目录的全部文件到暂存区
+git add [dir]                 # 添加指定目录到暂存区，包括子目录
+git rm --cache 文件名         #撤销错误添加到暂存区里的文件
+git add .                    #添加当前目录的全部文件到暂存区
 git rm [file1] [file2] ...    # 删除工作区文件，并且将这次删除放入暂存区
 git mv [file-original] [file-renamed]    # 改名文件，并且将这个改名放入暂存区
 git commit -m [message]                      # 同步暂存区到本地仓库区,本地目录发生变化使用此命令后仓库也保持一致
