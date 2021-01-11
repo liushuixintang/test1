@@ -4,8 +4,9 @@ Repository：本地仓库
 Remote：网上仓库  
 
 # 设置提交代码时的用户信息
-git config [--global] user.name "[name]"
-git config [--global] user.email "[email address]"
+
+git config --global user.name "[登陆名]"
+git config --global user.email "[邮箱]"
 #设置登入密码 打开.git文件夹编辑config 修改[remote "origin"] url = https://github.com/用户名:密码@github.com/用户名/仓库名.git
 
 git status         #查看文件状态
